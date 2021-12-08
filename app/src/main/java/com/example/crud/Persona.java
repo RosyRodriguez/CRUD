@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 public class Persona {
 
     @PrimaryKey(autoGenerate = true)
-    private  int id;
+    private  int persona_id;
 
     @ColumnInfo(name="personaNombre")
     @NonNull
@@ -27,18 +27,18 @@ public class Persona {
     }
 
     public Persona(int id, @NonNull String nombre, int edad, int telefono) {
-        this.id = id;
+        this.persona_id= id;
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;
     }
 
     public int getId() {
-        return id;
+        return persona_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.persona_id= id;
     }
 
     @NonNull
